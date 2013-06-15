@@ -20,3 +20,8 @@ os :linux do
 end
 
 gem 'rake'
+
+# Dev webserver
+gem 'rack'
+gem 'rack-rewrite'
+
