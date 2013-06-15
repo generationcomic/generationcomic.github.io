@@ -1,3 +1,71 @@
+// Libraries
 @import "bourbon/bourbon";
+
+@import "neat/neat-helpers";
+$desktop: new-breakpoint(min-width 960px);
+$tablet: new-breakpoint(min-width 768px max-width 959px);
+$mobile-landscape: new-breakpoint(min-width 480px max-width 767px);
+$mobile-portrait: new-breakpoint(max-width 767px);
+$small-devices: new-breakpoint(max-width 959px);
+
 @import "neat/neat";
 
+// Reset
+@import "reset";
+
+// Mixins
+@mixin font-size($sizeValue: 1.6) {
+  font-size: ($sizeValue * 10) + px;
+  font-size: $sizeValue + rem;
+}
+
+// Variables
+$highlight: #0ec5a5;
+
+// Global
+html {
+  font-size: 62.5%;
+}
+
+body {
+  @include font-size(1.8);
+  line-height: 1.27;
+  font-family: 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
+}
+
+#site-header {
+}
+
+#site-main { // div[role=main]
+  $max-width: 768px;
+  @include outer-container; // Grid Container
+}
+
+section.intro {
+  @include font-size(2.2);
+}
+
+section {
+  @include span-columns(12);
+  margin-bottom: 30px;
+  padding: 0 1em;
+  text-align: justify;
+
+  h1 {
+    @include font-size(3.2);
+    font-weight: bold;
+    color: $highlight;
+    margin-bottom: 7px;
+  }
+
+  a {
+    $linkHighlight: darken($highlight, 5%);
+    color: $linkHighlight;
+    &:hover {
+      border-bottom: 1px solid $linkHighlight;
+    }
+  }
+  p {
+    margin-bottom: 0.8em;
+  }
+}
