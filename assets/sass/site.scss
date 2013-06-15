@@ -34,6 +34,49 @@ body {
 }
 
 #site-header {
+  $headerHeight: 100px;
+  $cornerWidth: 30px;
+
+  background: #000;
+  text-transform: uppercase;
+  text-align: center;
+  max-width: 400px;
+  height: $headerHeight;
+  margin: 40px auto 0;
+  color: #ff0000;
+  position: relative;
+  padding-top: 20px;
+  h1 {
+    @include font-size(4.5);
+    font-family: Georgia, serif;
+    font-weight: bold;
+    color: $highlight;
+    line-height: 1;
+  }
+  h2 {
+    color: #fff;
+    font-weight: 100;
+  }
+  &::before {
+    display: block;
+    position: absolute;
+    content: '';
+    left: -1 * $cornerWidth; top: 0;
+    width: 0; height: 0;
+    border-style: solid;
+    border-width: 0 0 $headerHeight $cornerWidth;
+    border-color: transparent transparent #000 transparent;
+  }
+  &::after {
+    display: block;
+    position: absolute;
+    content: '';
+    right: -1 * $cornerWidth; top: 0;
+    width: 0; height: 0;
+    border-style: solid;
+    border-width: 0 $cornerWidth $headerHeight 0;
+    border-color: transparent transparent #000 transparent;
+  }
 }
 
 #site-main { // div[role=main]
