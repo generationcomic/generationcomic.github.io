@@ -79,6 +79,28 @@ body {
   }
 }
 
+#site-nav {
+  background: #000;
+  border-bottom: 3px solid $highlight;
+  min-height: 3em;
+  margin-bottom: 3em;
+  a {
+    color: #fff;
+    &:hover, &:active { color: $highlight; }
+  }
+  ul {
+    margin-left: 230px;
+  }
+  li {
+    float: left;
+    @include font-size(1.8);
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-right: 50px;
+    margin-top: 1em;
+  }
+}
+
 #site-main { // div[role=main]
   $max-width: 768px;
   @include outer-container; // Grid Container
