@@ -4,6 +4,22 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'texgyreadventorbold';
+  src: url("/assets/fonts/texgyreadventor-bold-webfont.eot");
+  src: url("/assets/fonts/texgyreadventor-bold-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/texgyreadventor-bold-webfont.woff") format("woff"), url("/assets/fonts/texgyreadventor-bold-webfont.ttf") format("truetype"), url("/assets/fonts/texgyreadventor-bold-webfont.svg#texgyreadventorbold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'texgyreadventorregular';
+  src: url("/assets/fonts/texgyreadventor-regular-webfont.eot");
+  src: url("/assets/fonts/texgyreadventor-regular-webfont.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/texgyreadventor-regular-webfont.woff") format("woff"), url("/assets/fonts/texgyreadventor-regular-webfont.ttf") format("truetype"), url("/assets/fonts/texgyreadventor-regular-webfont.svg#texgyreadventorregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* 
 html5doctor.com Reset Stylesheet
 v1.6.1
@@ -122,8 +138,8 @@ body {
   background: #000;
   text-transform: uppercase;
   text-align: center;
-  max-width: 400px;
-  height: 100px;
+  max-width: 480px;
+  height: 125px;
   margin: 40px auto 0;
   color: #ff0000;
   position: relative;
@@ -136,33 +152,41 @@ body {
   font-weight: bold;
   color: #0ec5a5;
   line-height: 1;
+  text-indent: -9999px;
+  background: url("/assets/images/generation.svg") no-repeat center;
+  width: 408px;
+  height: 73px;
+  margin: 0 auto;
 }
 #site-header h2 {
   color: #fff;
   font-weight: 100;
+  font-family: 'texgyreadventorregular', serif;
+  font-size: 21.2px;
+  font-size: 2.12rem;
 }
 #site-header::before {
   display: block;
   position: absolute;
   content: '';
-  left: -30px;
+  left: -50px;
   top: 0;
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 0 0 100px 30px;
+  border-width: 0 0 125px 50px;
   border-color: transparent transparent #000 transparent;
 }
 #site-header::after {
   display: block;
   position: absolute;
   content: '';
-  right: -30px;
+  right: -50px;
   top: 0;
   width: 0;
   height: 0;
   border-style: solid;
-  border-width: 0 30px 100px 0;
+  border-width: 0 50px 125px 0;
   border-color: transparent transparent #000 transparent;
 }
 
@@ -174,21 +198,25 @@ body {
 }
 #site-nav a {
   color: #fff;
+  font-family: 'texgyreadventorbold', serif;
+  letter-spacing: 1px;
+  font-weight: 100;
+  display: block;
+  padding: 0.8em 25px 0;
 }
 #site-nav a:hover, #site-nav a:active {
   color: #0ec5a5;
 }
 #site-nav ul {
-  margin-left: 230px;
+  text-align: center;
 }
 #site-nav li {
-  float: left;
+  display: inline-block;
+  float: none;
   font-size: 18px;
   font-size: 1.8rem;
   font-weight: bold;
   text-transform: uppercase;
-  margin-right: 50px;
-  margin-top: 1em;
 }
 
 #site-main {
@@ -228,6 +256,8 @@ section h1 {
   font-weight: bold;
   color: #0ec5a5;
   margin-bottom: 7px;
+  font-family: 'texgyreadventorbold', serif;
+  letter-spacing: 1px;
 }
 section a {
   color: #0cad91;
@@ -251,6 +281,12 @@ section {
   -moz-animation-delay: 0.5s;
   -webkit-animation-delay: 0.5s;
   animation-delay: 0.5s;
+}
+
+#site-nav a {
+  -webkit-transition: color .15s ease-out;
+  -moz-transition: color .15s ease-out;
+  transition: color .15s ease-out;
 }
 
 @-webkit-keyframes fade-in {
