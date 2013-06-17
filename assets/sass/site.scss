@@ -1,17 +1,15 @@
 // Libraries
 @import "bourbon/bourbon";
-
 @import "neat/neat-helpers";
 $desktop: new-breakpoint(min-width 960px);
 $tablet: new-breakpoint(min-width 768px max-width 959px);
 $mobile-landscape: new-breakpoint(min-width 480px max-width 767px);
 $mobile-portrait: new-breakpoint(max-width 767px);
 $small-devices: new-breakpoint(max-width 959px);
-
 @import "neat/neat";
 
-// Reset
-@import "reset";
+// Assets
+@import "fonts";
 
 // Mixins
 @mixin font-size($sizeValue: 1.6) {
@@ -21,6 +19,9 @@ $small-devices: new-breakpoint(max-width 959px);
 
 // Variables
 $highlight: #0ec5a5;
+
+// Kick it off with a reset.
+@import "reset";
 
 // Global
 html {
