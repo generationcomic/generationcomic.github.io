@@ -35,13 +35,13 @@ body {
 }
 
 #site-header {
-  $headerHeight: 100px;
-  $cornerWidth: 30px;
+  $headerHeight: 125px;
+  $cornerWidth: 50px;
 
   background: #000;
   text-transform: uppercase;
   text-align: center;
-  max-width: 400px;
+  max-width: 480px;
   height: $headerHeight;
   margin: 40px auto 0;
   color: #ff0000;
@@ -53,6 +53,10 @@ body {
     font-weight: bold;
     color: $highlight;
     line-height: 1;
+    text-indent: -9999px;
+    background: url('/assets/images/generation.svg') no-repeat center;
+    width: 408px; height: 73px;
+    margin: 0 auto;
   }
   h2 {
     color: #fff;
