@@ -61,6 +61,8 @@ body {
   h2 {
     color: #fff;
     font-weight: 100;
+    font-family: 'texgyreadventorregular', serif;
+    @include font-size(2.12);
   }
   &::before {
     display: block;
@@ -91,18 +93,23 @@ body {
   margin-bottom: 3em;
   a {
     color: #fff;
+    //font-family: 'texgyreadventorregular', serif;
+    font-family: 'texgyreadventorbold', serif;
+    letter-spacing: 1px;
+    font-weight: 100;
+    display: block;
+    padding: 0.8em 25px 0;
     &:hover, &:active { color: $highlight; }
   }
   ul {
-    margin-left: 230px;
+    text-align: center;
   }
   li {
-    float: left;
+    display: inline-block;
+    float: none;
     @include font-size(1.8);
     font-weight: bold;
     text-transform: uppercase;
-    margin-right: 50px;
-    margin-top: 1em;
   }
 }
 
@@ -126,6 +133,8 @@ section {
     font-weight: bold;
     color: $highlight;
     margin-bottom: 7px;
+    font-family: 'texgyreadventorbold', serif;
+    letter-spacing: 1px;
   }
 
   a {
@@ -152,6 +161,11 @@ section {
   -moz-animation-delay: 0.5s;
   -webkit-animation-delay: 0.5s;
   animation-delay: 0.5s;
+}
+#site-nav a {
+  -webkit-transition: color .15s ease-out;
+  -moz-transition: color .15s ease-out;
+  transition: color .15s ease-out;
 }
 
 @-webkit-keyframes fade-in {
