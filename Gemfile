@@ -18,6 +18,9 @@ gem 'neat'
 os :linux do
   gem 'rb-inotify'
 end
+os :mac do
+  gem 'rb-fsevent', '~> 0.9'
+end
 
 gem 'rake'
 
