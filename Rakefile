@@ -17,11 +17,13 @@ def sass(maps={}, opts={})
   opts = {
     :style => "expanded",
     :watch => false,
+    :require => "./lib/generation/sass.rb",
   }.merge(opts)
 
   cmd =  ["sass"]
   cmd << "--style #{opts[:style]}" if opts[:style]
   cmd << "--watch" if opts[:watch]
+  cmd << "-r #{opts[:require]}" if opts[:require]
   cmd << maps.map do |src, target|
            "#{File.join(SASS_DIR, src)}:#{File.join(CSS_DIR, target)}"
          end
