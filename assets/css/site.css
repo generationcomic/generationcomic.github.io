@@ -247,7 +247,6 @@ body {
   margin-right: 2.35765%;
   width: 100%;
   margin-bottom: 30px;
-  padding: 0 1em;
   text-align: justify;
 }
 #site-main section:last-child {
@@ -270,6 +269,15 @@ body {
 }
 #site-main section p {
   margin-bottom: 0.8em;
+}
+#site-main section.submit, #site-main section.support {
+  display: block;
+  float: left;
+  margin-right: 2.35765%;
+  width: 48.82117%;
+}
+#site-main section.submit:last-child, #site-main section.support:last-child {
+  margin-right: 0;
 }
 
 nav, header, section {

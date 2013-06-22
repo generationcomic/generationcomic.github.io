@@ -130,7 +130,6 @@ body {
   section {
     @include span-columns(12);
     margin-bottom: 30px;
-    padding: 0 1em;
     text-align: justify;
 
     h1 {
@@ -152,6 +151,10 @@ body {
     p {
       margin-bottom: 0.8em;
     }
+  }
+
+  section.submit, section.support {
+    @include span-columns(6);
   }
 }
 
