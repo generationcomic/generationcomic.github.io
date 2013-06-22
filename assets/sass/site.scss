@@ -92,9 +92,8 @@ body {
 
 #site-nav {
   background: #000;
-  border-bottom: 3px solid $highlight;
+  border-bottom: 5px solid $highlight;
   min-height: 3em;
-  margin-bottom: 3em;
   a {
     color: #fff;
     font-family: 'texgyreadventorbold', sans-serif;
@@ -114,6 +113,14 @@ body {
     font-weight: bold;
     text-transform: uppercase;
   }
+}
+.pull-down {
+  display: block;
+  margin: 0 auto 2em;
+  width: 0; height: 0;
+  border-style: solid;
+  border-width: 40px 100px 0 100px;
+  border-color: $highlight transparent transparent transparent;
 }
 
 #site-main { // div[role=main]
@@ -158,7 +165,7 @@ body {
 }
 
 // Animation
-nav, header, section {
+nav, header, section, .pull-down {
   opacity: 0;
   -webkit-animation: fade-in 1s linear forwards;
   -moz-animation: fade-in 1s linear forwards;

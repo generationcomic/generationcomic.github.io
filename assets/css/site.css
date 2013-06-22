@@ -801,9 +801,8 @@ body {
 
 #site-nav {
   background: #000;
-  border-bottom: 3px solid #0ec5a5;
+  border-bottom: 5px solid #0ec5a5;
   min-height: 3em;
-  margin-bottom: 3em;
 }
 #site-nav a {
   color: #fff;
@@ -826,6 +825,16 @@ body {
   font-size: 1.8rem;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+.pull-down {
+  display: block;
+  margin: 0 auto 2em;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 40px 100px 0 100px;
+  border-color: #0ec5a5 transparent transparent transparent;
 }
 
 #site-main section.intro {
@@ -855,7 +864,7 @@ body {
   margin-bottom: 0.8em;
 }
 
-nav, header, section {
+nav, header, section, .pull-down {
   opacity: 0;
   -webkit-animation: fade-in 1s linear forwards;
   -moz-animation: fade-in 1s linear forwards;
