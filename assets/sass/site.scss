@@ -1,12 +1,9 @@
+// Global Foundation Settings
+@import "settings";
+
 // Libraries
-@import "bourbon/bourbon";
-@import "neat/neat-helpers";
-$desktop: new-breakpoint(min-width 960px);
-$tablet: new-breakpoint(min-width 768px max-width 959px);
-$mobile-landscape: new-breakpoint(min-width 480px max-width 767px);
-$mobile-portrait: new-breakpoint(max-width 767px);
-$small-devices: new-breakpoint(max-width 959px);
-@import "neat/neat";
+@import "foundation/components/global"; // required
+@import "foundation/components/grid";
 
 // Assets
 @import "fonts";
@@ -121,14 +118,15 @@ body {
 
 #site-main { // div[role=main]
   $max-width: 768px;
-  @include outer-container; // Grid Container
+  @extend .row; // Grid Container
 
   section.intro {
     @include font-size(2.2);
   }
 
   section {
-    @include span-columns(12);
+    @extend .columns;
+    @extend .large-12;
     margin-bottom: 30px;
     text-align: justify;
 
@@ -154,7 +152,8 @@ body {
   }
 
   section.submit, section.support {
-    @include span-columns(6);
+    @extend .columns;
+    @extend .large-6;
   }
 }
 

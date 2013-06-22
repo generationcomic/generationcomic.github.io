@@ -11,18 +11,17 @@ def os(name)
 end
 
 # Compilation
-gem 'sass'
-gem 'bourbon'
-gem 'neat'
+gem 'compass'
+gem 'zurb-foundation'
+gem 'rake'
 
+# Dev compilation (rake watch)
 os :linux do
   gem 'rb-inotify'
 end
 os :mac do
   gem 'rb-fsevent', '~> 0.9'
 end
-
-gem 'rake'
 
 # Dev webserver
 gem 'rack'
