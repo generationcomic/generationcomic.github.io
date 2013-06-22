@@ -47,21 +47,28 @@ body {
   color: #ff0000;
   position: relative;
   padding-top: 20px;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  text-indent: -9999px;
+  background-image: url('/assets/images/generation.png');
+  .svg & { // body.svg #site-header
+    background-image: url_base64_encode_asset('assets/images/generation.svg', svg);
+  }
+
   h1 {
     @include font-size(4.5);
     font-family: Georgia, serif;
     font-weight: bold;
     color: $highlight;
     line-height: 1;
-    text-indent: -9999px;
-    background: url('/assets/images/generation.svg') no-repeat center;
     width: 408px; height: 73px;
     margin: 0 auto;
   }
   h2 {
     color: #fff;
     font-weight: 100;
-    font-family: 'texgyreadventorregular', serif;
+    font-family: 'texgyreadventorregular', sans-serif;
     @include font-size(2.12);
   }
   &::before {
@@ -93,8 +100,7 @@ body {
   margin-bottom: 3em;
   a {
     color: #fff;
-    //font-family: 'texgyreadventorregular', serif;
-    font-family: 'texgyreadventorbold', serif;
+    font-family: 'texgyreadventorbold', sans-serif;
     letter-spacing: 1px;
     font-weight: 100;
     display: block;
@@ -116,36 +122,36 @@ body {
 #site-main { // div[role=main]
   $max-width: 768px;
   @include outer-container; // Grid Container
-}
 
-section.intro {
-  @include font-size(2.2);
-}
-
-section {
-  @include span-columns(12);
-  margin-bottom: 30px;
-  padding: 0 1em;
-  text-align: justify;
-
-  h1 {
-    @include font-size(3.2);
-    font-weight: bold;
-    color: $highlight;
-    margin-bottom: 7px;
-    font-family: 'texgyreadventorbold', serif;
-    letter-spacing: 1px;
+  section.intro {
+    @include font-size(2.2);
   }
 
-  a {
-    $linkHighlight: darken($highlight, 5%);
-    color: $linkHighlight;
-    &:hover {
-      border-bottom: 1px solid $linkHighlight;
+  section {
+    @include span-columns(12);
+    margin-bottom: 30px;
+    padding: 0 1em;
+    text-align: justify;
+
+    h1 {
+      @include font-size(3.2);
+      font-weight: bold;
+      color: $highlight;
+      margin-bottom: 7px;
+      font-family: 'texgyreadventorbold', sans-serif;
+      letter-spacing: 1px;
     }
-  }
-  p {
-    margin-bottom: 0.8em;
+
+    a {
+      $linkHighlight: darken($highlight, 5%);
+      color: $linkHighlight;
+      &:hover {
+        border-bottom: 1px solid $linkHighlight;
+      }
+    }
+    p {
+      margin-bottom: 0.8em;
+    }
   }
 }
 
