@@ -738,13 +738,18 @@ body {
   font-family: 'Helvetica Neue', 'Arial', 'Helvetica', sans-serif;
 }
 
+#covers {
+  padding-top: 160px;
+  background: url("/assets/images/covers.jpg") no-repeat top center;
+}
+
 #site-header {
   background: #000;
   text-transform: uppercase;
   text-align: center;
   max-width: 480px;
   height: 125px;
-  margin: 40px auto 0;
+  margin: 0 auto;
   color: #ff0000;
   position: relative;
   padding-top: 20px;
@@ -864,7 +869,7 @@ body {
   margin-bottom: 0.8em;
 }
 
-nav, header, section, .pull-down {
+nav, header, section, .pull-down, #covers {
   opacity: 0;
   -webkit-animation: fade-in 1s linear forwards;
   -moz-animation: fade-in 1s linear forwards;
