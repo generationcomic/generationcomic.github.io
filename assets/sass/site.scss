@@ -54,7 +54,7 @@ body {
   text-indent: -9999px;
   background-image: url('/assets/images/generation.png');
   .svg & { // body.svg #site-header
-    background-image: url_base64_encode_asset('assets/images/generation.svg', svg);
+    background-image: inline-image('generation.svg');
   }
 
   h1 {
