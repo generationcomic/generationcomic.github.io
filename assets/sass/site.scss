@@ -168,6 +168,58 @@ body {
   }
 }
 
+#site-footer {
+  .social {
+    $headerHeight: 70px;
+    $cornerWidth: 30px;
+
+    background-color: $highlight;
+    text-transform: uppercase;
+    text-align: left;
+    max-width: 480px;
+    height: $headerHeight;
+    margin: 0 auto;
+    color: #fff;
+    position: relative;
+    padding-top: 20px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+
+    h1 {
+      @include font-size(4.5);
+      font-family: Georgia, serif;
+      font-weight: bold;
+      line-height: 1;
+      //width: 408px; height: 73px;
+      margin: 0 auto;
+    }
+    &::before {
+      display: block;
+      position: absolute;
+      content: '';
+      left: -1 * $cornerWidth; top: 0;
+      width: 0; height: 0;
+      border-style: solid;
+      border-width: 0 0 $headerHeight $cornerWidth;
+      border-color: transparent transparent $highlight transparent;
+    }
+    &::after {
+      display: block;
+      position: absolute;
+      content: '';
+      right: -1 * $cornerWidth; top: 0;
+      width: 0; height: 0;
+      border-style: solid;
+      border-width: 0 $cornerWidth $headerHeight 0;
+      border-color: transparent transparent $highlight transparent;
+    }
+  }
+
+  .credits {
+  }
+}
+
 // Animation
 nav, header, section, .pull-down, #covers {
   opacity: 0;
